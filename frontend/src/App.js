@@ -13,7 +13,7 @@ function App() {
     setLoading(true);
     setError(null);
     try {
-      const response = await axios.get(`http://localhost:3002/api/v1/search?prompt=${query}`);
+      const response = await axios.get(`https://mikochan-the-mini-perplexity.onrender.com/api/v1/search?prompt=${query}`);
       setResults(response.data.summarizedResults);
     } catch (err) {
       setError('Failed to fetch results');
